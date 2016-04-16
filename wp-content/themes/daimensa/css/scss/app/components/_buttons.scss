@@ -1,0 +1,47 @@
+// ==============================================
+// BUTTONS
+// ==============================================
+
+// Vars
+$btnMainTextColor: $white;
+$btnMainBg: $orangePomegranate;
+$btnMainBorder: $white;
+$btnMainHoverBg: $brownKumera;
+$btnMainHoverBorder: $brownKumera;
+
+// GENERAL BUTTON
+.btn {
+  @extend .bold;
+  @include effect(all, 0.5s, ease);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+
+  // MAIN BUTTON
+  &.btn-main {
+    color: $btnMainTextColor;
+    background-color: $btnMainBg;
+    border: 3px solid $btnMainBorder;
+
+    &:hover, &:focus {
+      border-color: $btnMainHoverBorder;
+      background: $btnMainHoverBg;
+    }
+  }
+
+  // ALTERNATE BUTTON
+  &.btn-alternate {
+    // Use if alternate button
+  }
+
+}
+
+// VIEW MORE BUTTON
+// Used below the carousels (videos, recipes, etc.)
+.view-more-button {
+  margin-top: 20px;
+}

@@ -1,0 +1,85 @@
+// ==============================================
+// HEADER
+// ==============================================
+// Main header
+
+// Vars
+$menuOptionBarBgColor: $mainColor;
+$menuOptionColor: $white;
+$menuOptionHoverColor: $mainColor;
+$menuOptionBgHoverColor: $white;
+$menuOptionActiveBorderColor: $white;
+
+// MAIN HEADER
+#header {
+
+  height: 70px;
+  width: 100%;
+  background: $menuOptionBarBgColor;
+
+  // Navigation
+  nav {
+    @extend %clearfix;
+    padding-top: 15px;
+
+    ul {
+
+      list-style: none;
+
+      // Menu Option
+      li {
+        @include effect(all, 0.5s, ease);
+        float: left;
+        border: 2px solid transparent;
+        padding: 8px 10px;
+        margin: 0 5px;
+        position: relative;
+
+        // Menu Option Link
+        > a {
+          @extend .regular;
+          @include effect(all, 0.3s, ease);
+          font-size: 18px;
+          text-decoration: none;
+          color: $menuOptionColor;
+          position: relative;
+        }
+
+        // Active Menu Option
+        &.active {
+          border: 2px solid $menuOptionActiveBorderColor;
+        }
+
+        // Active / Hover
+        &:hover, &.active, &.hover {
+          background-color: $menuOptionBgHoverColor;
+          a { color: $menuOptionHoverColor; }
+        }
+
+      }
+    }
+
+  }
+
+}
+
+// ==============================================
+// IPAD LANDSCAPE
+// ==============================================
+@include ipadLandscape {
+
+}
+
+// ==============================================
+// IPAD PORTRAIT
+// ==============================================
+@include ipadPortrait {
+
+}
+
+// ==============================================
+// MOBILE
+// ==============================================
+@include mobile {
+
+}

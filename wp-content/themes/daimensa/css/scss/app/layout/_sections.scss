@@ -1,0 +1,66 @@
+// ==============================================
+// SECTIONS
+// ==============================================
+
+// Vars
+$sectionPaddingTop: 20px;
+$sectionPaddingBottom: 40px;
+
+$sectionMainBgColor: $mainColor;
+$sectionMainTitleColor: $alternativeColor;
+$sectionMainDescriptionColor: $alternativeColor;
+$sectionMainBorderColor: $alternativeColor;
+
+$sectionAlternativeBgColor: $alternativeColor;
+$sectionAlternativeTitleColor: $mainColor;
+$sectionAlternativeDescriptionColor: $blackLight;
+$sectionAlternativeBorderColor: transparent;
+
+// General Section
+section {
+  background: $sectionMainBgColor;
+  padding: $sectionPaddingTop 0 $sectionPaddingBottom;
+  border-bottom: 1px solid $sectionMainBorderColor;
+}
+
+// Section Title
+.title {
+
+  @extend .special;
+  color: $sectionMainTitleColor;
+  font-size: 42px;
+  position: relative;
+  margin-bottom: 30px;
+
+}
+
+// Section Alternative
+section.section-alternative {
+  padding-bottom: 0;
+  background: $sectionAlternativeBgColor;
+
+  .title {
+    color: $sectionAlternativeTitleColor;
+    + p { color: $sectionAlternativeDescriptionColor; }
+  }
+}
+
+// Main Content
+#main {
+  position: relative;
+}
+
+// ==============================================
+// MOBILE
+// ==============================================
+@include mobile {
+
+  // Title
+  .title {
+    font-size: 28px;
+    line-height: 1em;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+}

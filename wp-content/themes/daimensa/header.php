@@ -13,6 +13,9 @@
 	<!-- HTML5 FOR < IE9 -->
 	<?php get_template_part('templates/auxiliar/ie9html5'); ?>
 
+	<!-- LE STYLES -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+
 </head>
 
 <!-- BODY -->
@@ -22,6 +25,19 @@
 
 	<!-- HEADER -->
 	<header id="header">
+
+		<nav id="main-navigation">
+
+			<ul>
+				<li>Home</li>
+				<li>Products</li>
+				<li>About Us</li>
+				<li>Contact Us</li>
+
+			</ul>
+
+
+		</nav>
 
 	</header>
 

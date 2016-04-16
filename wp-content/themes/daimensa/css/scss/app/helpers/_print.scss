@@ -1,0 +1,16 @@
+// ==============================================
+// PRINT
+// ==============================================
+// We mainly use this one for the recipe print functionality
+
+.just-print {
+  display: none !important;
+}
+
+@media print {
+
+  .just-print {
+    display: block;
+  }
+
+}
