@@ -6,10 +6,10 @@
 $sectionPaddingTop: 20px;
 $sectionPaddingBottom: 40px;
 
-$sectionMainBgColor: $mainColor;
-$sectionMainTitleColor: $alternativeColor;
-$sectionMainDescriptionColor: $alternativeColor;
-$sectionMainBorderColor: $alternativeColor;
+$sectionMainBgColor: $white;
+$sectionMainTitleColor: $blackLight;
+$sectionMainDescriptionColor: $mainColor;
+$sectionMainBorderColor: $mainColor;
 
 $sectionAlternativeBgColor: $alternativeColor;
 $sectionAlternativeTitleColor: $mainColor;
@@ -21,33 +21,44 @@ section {
   background: $sectionMainBgColor;
   padding: $sectionPaddingTop 0 $sectionPaddingBottom;
   border-bottom: 1px solid $sectionMainBorderColor;
+  text-align: center; // by default all the sections will have the text centered
 }
 
 // Section Title
-.title {
-
-  @extend .special;
+section .title {
   color: $sectionMainTitleColor;
-  font-size: 42px;
+  font-size: 30px;
   position: relative;
-  margin-bottom: 30px;
-
+  margin-bottom: 5px;
 }
 
-// Section Alternative
-section.section-alternative {
-  padding-bottom: 0;
-  background: $sectionAlternativeBgColor;
+// Section supratitle
+section .supratitle {
+  color: $greyDusty;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 5px;
+}
 
-  .title {
-    color: $sectionAlternativeTitleColor;
-    + p { color: $sectionAlternativeDescriptionColor; }
+// Section description
+section .description {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  color: $greyDusty;
+}
+
+
+// ==============================================
+// CUSTOM SECTIONS
+// ==============================================
+section.columns {
+
+  // Column grid
+  .description {
+    margin-bottom: 40px;
   }
-}
-
-// Main Content
-#main {
-  position: relative;
 }
 
 // ==============================================

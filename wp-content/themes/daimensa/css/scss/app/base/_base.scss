@@ -15,9 +15,9 @@ body {
 }
 
 h1, h2, h3 {
-  @extend .bold;
-  color: $mainColor;
-  font-size: 38px;
+  @extend .titles;
+  color: $blackLight;
+  font-size: 28px;
   line-height: 1.2;
 }
 

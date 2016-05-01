@@ -4,40 +4,49 @@
  *********************************/
 // We have different columns (2-5) with icons and/or text for each of them
 ?>
-<section class="central">
+<section class="columns">
 
-    <!-- SECTION TITLE -->
-    <?php if ($sectionTitle) { ?>
-        <h2><?php echo $sectionTitle; ?></h2>
-    <?php } ?>
+    <div class="container">
 
-    <!-- SECTION DESCRIPTION -->
-    <?php if ($sectionDescription) { ?>
-        <p class="description"><?php echo $sectionDescription; ?></p>
-    <?php } ?>
+        <!-- SECTION SUPRATITLE -->
+        <?php if ($sectionSupratitle) { ?>
+            <p class="supratitle"><?php echo $sectionSupratitle; ?></p>
+        <?php } ?>
 
-    <!-- SECTION COLUMNS -->
-    <div class="grid col-<?php echo count($columns); ?>">
-    <?php foreach ($columns as $column) { ?>
-        <div>
+        <!-- SECTION TITLE -->
+        <?php if ($sectionTitle) { ?>
+            <h2 class="title"><?php echo $sectionTitle; ?></h2>
+        <?php } ?>
 
-            <!-- COLUMN TITLE -->
-            <?php if ($column['title']) { ?>
-                <h3><?php echo $column['title']; ?></h3>
-            <?php } ?>
+        <!-- SECTION DESCRIPTION -->
+        <?php if ($sectionDescription) { ?>
+            <p class="description"><?php echo $sectionDescription; ?></p>
+        <?php } ?>
 
-            <!-- COLUMN ICON -->
-            <?php if ($column['icon']) { ?>
-                <div class="icon icon-large" style="background-image: url(<?php echo $column['icon']; ?>)"></div>
-            <?php } ?>
+        <!-- SECTION COLUMNS -->
+        <div class="grid col-<?php echo count($columns); ?>">
+        <?php foreach ($columns as $column) { ?>
+            <div>
 
-            <!-- COLUMN DESCRIPTION -->
-            <?php if ($column['description']) { ?>
-                <p><?php echo $column['description']; ?></p>
-            <?php } ?>
+                <!-- COLUMN ICON -->
+                <?php if ($column['icon']) { ?>
+                    <div class="icon fa fa-4x fa-<?php echo $column['icon']; ?>"></div>
+                <?php } ?>
 
+                <!-- COLUMN TITLE -->
+                <?php if ($column['title']) { ?>
+                    <h3><?php echo $column['title']; ?></h3>
+                <?php } ?>
+
+                <!-- COLUMN DESCRIPTION -->
+                <?php if ($column['description']) { ?>
+                    <p><?php echo $column['description']; ?></p>
+                <?php } ?>
+
+            </div>
+        <?php } ?>
         </div>
-    <?php } ?>
+
     </div>
 
 </section>

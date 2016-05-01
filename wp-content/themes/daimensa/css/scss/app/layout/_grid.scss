@@ -4,19 +4,36 @@
 
 .grid {
 
-  &.row50 {
-
-    > .container {
-      @extend %clearfix;
-      > * {
-        width: 46%;
-        float: left;
-        &:first-child {
-          margin-right: 4%;
-        }
-      }
+  // 2 COLUMNS
+  &.col-2 {
+    @extend %clearfix;
+    > * {
+      width: 46%;
+      float: left;
+      &:first-child { margin-right: 4%; }
     }
+  }
 
+  // 3 COLUMNS
+  &.col-3 {
+    @extend %clearfix;
+    > * {
+      width: 31%;
+      margin-right: 1%;
+      float: left;
+      &:last-child { margin-right: 0; }
+    }
+  }
+
+  // 3 COLUMNS
+  &.col-4 {
+    @extend %clearfix;
+    > * {
+      width: 24%;
+      margin-right: 1%;
+      float: left;
+      &:last-child { margin-right: 0; }
+    }
   }
 
 }
